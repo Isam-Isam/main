@@ -1,43 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Embed with Link</title>
-    <style>
-        .embed-container {
-            background-color: #36393F;
-            color: white;
-            border-radius: 8px;
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        .embed-header {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .embed-description {
-            margin-bottom: 10px;
-        }
-        .embed-link {
-            color: #00b0f4;
-            text-decoration: none;
-        }
-        .embed-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://raw.githubusercontent.com/discowd-nitro/media-files/main/media/huh.gif">
+  <meta property="og:type" content="video.other">
+  <meta property="og:video:url" content="https://raw.githubusercontent.com/discowd-nitro/media-files/main/media/misery.mp4">
+  <meta property="og:video:height" content="202">
+  <meta property="og:video:width" content="250">
+  
+  <!-- Redirect after 5 seconds -->
+  <meta http-equiv="refresh" content="5; url=https://www.youtube.com/@notexttospeech">
+
+  <title>Clickbait Redirect</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      max-width: 80%;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .video-thumbnail {
+      width: 250px;
+      height: 202px;
+      background-image: url('https://raw.githubusercontent.com/discowd-nitro/media-files/main/media/huh.gif');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    .cta {
+      margin-top: 20px;
+      font-size: 18px;
+      background-color: #ff4081;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta:hover {
+      background-color: #ff80b2;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="embed-container">
-        <div class="embed-header">Custom Embed Title</div>
-        <div class="embed-description">This is a custom embed with a message and a link. Click below to visit the website:</div>
-        <a href="https://github.com" target="_blank" class="embed-link">Visit GitHub</a>
-    </div>
-
+  <div class="container">
+    <h1>Oops! You got clickbaited!</h1>
+    <div class="video-thumbnail"></div>
+    <p>Click below to check out our channel!</p>
+    <a href="https://www.youtube.com/@notexttospeech" class="cta">Go to Channel</a>
+  </div>
 </body>
 </html>
